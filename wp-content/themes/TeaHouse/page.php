@@ -1,55 +1,27 @@
 <?php get_header(); ?>
 
-    <!-- Carousel Start -->
-    LP[KOKOKKK]
-    <div class="container-fluid px-0 mb-5">
-        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="w-100" src="<?php echo TEA_FILES_URL; ?>/img/carousel-1.jpg" alt="Image">
-                    <div class="carousel-caption">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-7 text-center">
-                                    <p class="fs-4 text-white animated zoomIn">Welcome to <strong class="text-dark">TEA House</strong></p>
-                                    <h1 class="display-1 text-dark mb-4 animated zoomIn">Organic & Quality Tea Production</h1>
-                                    <a href="" class="btn btn-light rounded-pill py-3 px-5 animated zoomIn">Explore More</a>
-                                </div>
-                            </div>
-                        </div>
+<?php if ( have_posts() ) : ?>
+
+    <?php while( have_posts() ) : the_post(); ?>
+        <div class="<?php post_class( 'container-xxl py-5' ); ?> ">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+                        <img class="img-fluid" src="img/article.jpg" alt="">
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="w-100" src="<?php echo TEA_FILES_URL; ?>/img/carousel-2.jpg" alt="Image">
-                    <div class="carousel-caption">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-7 text-center">
-                                    <p class="fs-4 text-white animated zoomIn">Welcome to <strong class="text-dark">TEA House</strong></p>
-                                    <h1 class="display-1 text-dark mb-4 animated zoomIn">Organic & Quality Tea Production</h1>
-                                    <a href="" class="btn btn-light rounded-pill py-3 px-5 animated zoomIn">Explore More</a>
-                                </div>
-                            </div>
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                        <div class="section-title">
+                            <p class="fs-5 fw-medium fst-italic text-primary">Featured Acticle</p>
+                            <h1 class="display-6"><?php the_title(); ?></h1>
                         </div>
+                        <p class="mb-4"><?php the_content(); ?></p>
+                        <a href="" class="btn btn-primary rounded-pill py-3 px-5">Read More</a>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
-    </div>
-    <!-- Carousel End -->
+    <?php endwhile; ?>
 
+<?php endif; ?>
 
-    <!-- About Start -->
-    
-
-<?php get_footer(); ?>
+    <?php get_footer(); ?>
