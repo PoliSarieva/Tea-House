@@ -10,6 +10,8 @@ function my_load_scripts($hook) {
     if (! defined( 'TEA_FILES_URL' ) ) {
         define( 'TEA_FILES_URL', get_template_directory_uri() );
     }
+
+    add_theme_support( 'title-tag' );
 	
     //Styles
     wp_enqueue_style( 'animate-min.css', TEA_FILES_URL . '/lib/animate/animate.min.css', false,   '1.0.0' );
@@ -30,12 +32,54 @@ function my_load_scripts($hook) {
 }
 add_action('wp_enqueue_scripts', 'my_load_scripts');
 
-// <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-//     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-//     <script src="lib/wow/wow.min.js"></script>
-//     <script src="lib/easing/easing.min.js"></script>
-//     <script src="lib/waypoints/waypoints.min.js"></script>
-//     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-//     <!-- Template Javascript -->
-//     <script src="js/main.js"></script>
+
+/**
+ * Register our navigation menus
+ * 
+ * @return void
+ */
+
+ function tea_register_nav_menus() {
+    register_nav_menus(
+        array(
+        'header-menu' => __( 'Header Menu' ),
+        )
+    );
+}
+    add_action( 'init', 'tea_register_nav_menus' );
+
+
+    /**
+     * Sidebar here
+     * 
+     * @return void
+     */
+    
+// function softuni_sidebars() {
+//     register_sidebar(
+//         array(
+//             'id'            => 'footer-1',
+//             'name'          => __( 'Footer 01' ),
+//             'description'   => __( 'A short description of the sidebar.' ),
+//             'before_widget' => '<div id="%1$s" class="widget %2$s">',
+//             'after_widget'  => '</div>',
+//             'before_title'  => '<h3 class="widget-title">',
+//             'after_title'   => '</h3>',
+//         )
+//     );
+
+//     register_sidebar(
+//         array(
+//             'id'            => 'footer-2',
+//             'name'          => __( 'Footer 02' ),
+//             'description'   => __( 'A short description of the sidebar.' ),
+//             'before_widget' => '<div id="%1$s" class="widget %2$s">',
+//             'after_widget'  => '</div>',
+//             'before_title'  => '<h3 class="widget-title">',
+//             'after_title'   => '</h3>',
+//         )
+//     );
+// }
+
+// add_action( 'widgets_init', 'softuni_sidebars' );

@@ -504,3 +504,16 @@
 .copyright a:hover {
     color: #FFFFFF !important;
 }
+
+/*custom css*/
+
+#navbarCollapse-ul li a{
+    position: relative;
+  display: flex;
+  flex-wrap: wrap; /*allow us to do the line break for collapsing content*/ 
+  align-items: center;
+  justify-content: space-between; /*space out brand from logo*/ 
+  color: black;
+ 
+}
+

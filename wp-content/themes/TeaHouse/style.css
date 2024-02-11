@@ -10,3 +10,15 @@ License URI: https://htmlcodex.com/license (or read the LICENSE.txt file)
 Text Domain: softuni
 Tags: 
 */
+
+
+/*custom css*/
+
+#navbarCollapse-ul {
+    position: relative;
+  display: flex;
+  flex-wrap: wrap; /*allow us to do the line break for collapsing content*/ 
+  align-items: center;
+  justify-content: space-between; /*space out brand from logo*/ 
+ 
+}
