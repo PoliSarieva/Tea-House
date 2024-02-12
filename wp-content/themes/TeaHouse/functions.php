@@ -1,5 +1,7 @@
 <?php
 
+add_theme_support( 'post-thumbnails' );
+
 function my_load_scripts($hook) {
 
     $args = array( 
