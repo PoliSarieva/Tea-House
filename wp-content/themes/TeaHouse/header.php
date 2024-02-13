@@ -38,7 +38,7 @@
     <div class="container-fluid bg-white sticky-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-white navbar-light py-2 py-lg-0">
-                <a href="<?php echo home_url(); ?>" class="navbar-brand">
+                <a href="<?php echo esc_url( home_url() ); ?>" class="navbar-brand">
                     <img class="img-fluid" src="<?php echo TEA_FILES_URL; ?>/img/logo.png" alt="Logo">
                 </a>
                 <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
