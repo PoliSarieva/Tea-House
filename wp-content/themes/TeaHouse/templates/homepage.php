@@ -51,10 +51,6 @@
             </button>
         </div>
     </div>
-    <!-- Carousel End -->
-
-
-    <!-- About Start -->
-    
+    <!-- Carousel End -->    
 
 <?php get_footer(); ?>
