@@ -1,5 +1,6 @@
 <?php
 
+add_theme_support( 'title-tag' );
 add_theme_support( 'post-thumbnails' );
 
 function my_load_scripts($hook) {
@@ -13,7 +14,7 @@ function my_load_scripts($hook) {
         define( 'TEA_FILES_URL', get_template_directory_uri() );
     }
 
-    add_theme_support( 'title-tag' );
+    
 	
     //Styles
     wp_enqueue_style( 'animate-min.css', TEA_FILES_URL . '/lib/animate/animate.min.css', false,   '1.0.0' );
