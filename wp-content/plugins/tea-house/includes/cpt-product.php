@@ -16,6 +16,12 @@ class Su_Products {
         //Register CPT and taxonomy
         add_action( 'init', array( $this, 'product_cpt', ) );
         add_action( 'init', array( $this, 'product_category_taxonomy' ) );
+
+        //Register metaboxes
+        add_action( 'add_meta_boxes',array( $this, 'have_image_meta_boxes' ) );
+
+        //Save Action
+        add_action( 'save_post', array( $this, 'have_image_save' ) );
     }
 
     
@@ -97,6 +103,49 @@ class Su_Products {
 
         register_taxonomy( 'product-category', 'product', $args );
     }
+
+    /**
+     * Register meta box(es).
+     */
+   public function have_image_meta_boxes() {
+    add_meta_box( 'image', __( 'Image', 'softuni' ), array( $this, 'have_image_metabox_callback'), 'post', 'side' );
+}
+
+/**
+ * Callback function for my image Metabox
+ * 
+ * @return void
+ */
+
+public function have_image_metabox_callback( $post_id ) {
+$checked = get_post_meta( $post_id->ID, 'have_image', true );
+?>
+<div>
+    <label for="have_image">Have Image</label>
+    <input id="have_image" name="have_image" type="checkbox" value="" <?php checked( $checked, 0, true ); ?>/> >
+
+</div>
+<?php
+}
+
+/**
+ * Save my Image post meta
+ * 
+ * @return void
+ */
+public function have_image_save( $post_id) {
+    if (empty( $post_id )) {
+        return;
+    }
+
+    $image = '';
+
+    if (isset( $_POST[ 'image' ])) {
+        $image = esc_attr( $_POST[ 'image' ]);
+    }
+
+    update_post_meta( $post_id, 'have_image', $image);
+}
 }
 
 $su_products_instance = new Su_Products();
