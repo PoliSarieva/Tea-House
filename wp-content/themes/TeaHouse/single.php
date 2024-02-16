@@ -19,7 +19,7 @@
                             <h1 class="display-6"><?php the_title(); ?></h1>
                         </div>
                         <p class="mb-4"><?php the_content(); ?></p>
-                        <a href="" class="btn btn-primary rounded-pill py-3 px-5">Read More</a>
+                        
                     </div>
                 </div>
             </div>

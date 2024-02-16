@@ -14,5 +14,5 @@
     </div>
 
     <p class="mb-4"><?php the_excerpt(); ?></p>
-    <a href="" class="btn btn-primary rounded-pill py-3 px-5">Read More</a>
+   
 </div>
