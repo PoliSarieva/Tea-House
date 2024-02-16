@@ -24,6 +24,10 @@ if ( ! defined( 'TEA_HOUSE_PLUGIN_INCLUDES_DIR' ) ) {
     define( 'TEA_HOUSE_PLUGIN_INCLUDES_DIR', plugin_dir_path(__FILE__) . 'includes' );
 }
 
+if ( ! defined( 'TEA_HOUSE_PLUGIN_ASSETS_DIR' ) ) {
+    define( 'TEA_HOUSE_PLUGIN_ASSETS_DIR', plugins_url('assets', __FILE__) );
+}
+
 require TEA_HOUSE_PLUGIN_INCLUDES_DIR . '/functions.php';
 require TEA_HOUSE_PLUGIN_INCLUDES_DIR . '/cpt-product.php';
 

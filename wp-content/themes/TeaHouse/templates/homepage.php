@@ -3,14 +3,18 @@
  * Template Name: Homepage
  */
 ?>
+<?php
 
+$teas_homepage_post_per_page = get_option( 'teas_homepage_post_per_page' );
 
-
-<?php 
+if( empty ( $teas_homepage_post_per_page ) ) {
+    $teas_homepage_post_per_page = 3;
+}
+ 
 $tea_args = array(
     'post-type'      => 'tea',
     'post-status'    => 'publish',
-    'posts_per_page' => 3,
+    'posts_per_page' => $teas_homepage_post_per_page,
     'meta_query'     => array(
         'key'     => 'is_type_tea',
         'value'   => 1,
