@@ -12,8 +12,8 @@ if( empty ( $teas_homepage_post_per_page ) ) {
 }
  
 $tea_args = array(
-    'post-type'      => 'tea',
-    'post-status'    => 'publish',
+    'post_type'      => 'post',
+    'post_status'    => 'publish',
     'posts_per_page' => $teas_homepage_post_per_page,
     'meta_query'     => array(
         'key'     => 'is_type_tea',

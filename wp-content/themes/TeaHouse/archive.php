@@ -2,8 +2,8 @@
 
 <?php 
 $query_args = array(
-    'post-type'   => 'post',
-    'post-status' => 'publish',
+    'post_type'   => 'post',
+    'post_status' => 'publish',
 );
 
 $wp_query = new WP_Query( $query_args );

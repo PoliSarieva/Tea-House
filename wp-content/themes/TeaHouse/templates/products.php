@@ -6,8 +6,8 @@
 
 <?php 
 $blog_query_args = array(
-    'post-type'   => 'post',
-    'post-status' => 'publish',
+    'post_type'   => 'product',
+    'post_status' => 'publish',
 );
 
 $blog_query = new WP_Query( $blog_query_args );
