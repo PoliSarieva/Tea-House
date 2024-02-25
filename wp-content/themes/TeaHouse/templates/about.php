@@ -29,7 +29,7 @@
                     </div>
                     <div class="row g-3 mb-4">
                         <div class="col-sm-4">
-                            <img class="img-fluid bg-white w-100" src="img/about-5.jpg" alt="">
+                            <img class="img-fluid bg-white w-100" src="<?php echo TEA_FILES_URL; ?>/img/about-5.jpg" alt="">
                         </div>
                         <div class="col-sm-8">
                             <h5>Our tea is one of the most popular drinks in the world</h5>
