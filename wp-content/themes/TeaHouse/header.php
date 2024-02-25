@@ -63,18 +63,18 @@
                     </div> -->
                     
                 
-                <?php 
-                    wp_nav_menu( $args = array(
-                        'menu'				=> "navbarCollapse", // (int|string|WP_Term) Desired menu. Accepts a menu ID, slug, name, or object.
-                        'menu_class'		=> "navbar-nav ms-auto", // (string) CSS class to use for the ul element which forms the menu. Default 'menu'.
-                        'menu_id'			=> "navbarCollapse-ul", // (string) The ID that is applied to the ul element which forms the menu. Default is the menu slug, incremented.
-                        'container'			=> "ul", // (string) Whether to wrap the ul, and what to wrap it with. Default 'div'.
-                        //'container_class'	=> "collapse navbar-collapse", // (string) Class that is applied to the container. Default 'menu-{menu slug}-container'.
-                        //'container_id'		=> "navbarCollapse", // (string) The ID that is applied to the container.
-                        'theme_location'	=> "primary-menu", // (string) Theme location to be used. Must be registered with register_nav_menu() in order to be selectable by the user.
-                        
-                    ) );
-                ?>
+                        <?php 
+                            wp_nav_menu( $args = array(
+                                //'menu'				=> "navbarCollapse", // (int|string|WP_Term) Desired menu. Accepts a menu ID, slug, name, or object.
+                                'menu_class'		=> "navbar-nav ms-auto", // (string) CSS class to use for the ul element which forms the menu. Default 'menu'.
+                                'menu_id'			=> "navbarCollapse-ul", // (string) The ID that is applied to the ul element which forms the menu. Default is the menu slug, incremented.
+                                'container'			=> "ul", // (string) Whether to wrap the ul, and what to wrap it with. Default 'div'.
+                                //'container_class'	=> "collapse navbar-collapse", // (string) Class that is applied to the container. Default 'menu-{menu slug}-container'.
+                                //'container_id'		=> "navbarCollapse", // (string) The ID that is applied to the container.
+                                'theme_location'	=> "primary-menu", // (string) Theme location to be used. Must be registered with register_nav_menu() in order to be selectable by the user.
+                                
+                            ) );
+                        ?>
                     <div class="border-start ps-4 d-none d-lg-block">
                         <button type="button" class="btn btn-sm p-0"><i class="fa fa-search"></i></button>
                     </div>

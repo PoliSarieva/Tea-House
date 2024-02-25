@@ -1,4 +1,4 @@
-<div id="sidebar-footer-2" class="col-lg-3 col-md-6 text-primary mb-4">
+<div id="sidebar-footer-2" class="col-lg-3 col-md-6">
     <?php dynamic_sidebar( 'footer-02' ) ?>
 </div>
 

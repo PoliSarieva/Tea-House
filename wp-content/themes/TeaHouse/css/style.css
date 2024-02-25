@@ -508,13 +508,17 @@
 /*custom css*/
 
 #navbarCollapse-ul li a{
-    position: relative;
-  display: flex;
-  flex-wrap: wrap; /*allow us to do the line break for collapsing content*/ 
-  align-items: center;
-  justify-content: space-between; /*space out brand from logo*/ 
-  color: black;
- 
+    margin-right: 35px;
+    padding: 25px 0;
+    color: var(--dark);
+    font-weight: 600;
+    text-transform: uppercase;
+    outline: none;
+  
+}
+
+#navbarCollapse-ul li a:hover {
+    color: var(--primary);
 }
 
 .widget-title {

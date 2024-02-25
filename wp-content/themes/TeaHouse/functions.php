@@ -71,8 +71,8 @@ function softuni_sidebars() {
             'description'   => __( 'A short description of the sidebar.' ),
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget'  => '</div>',
-            'before_title'  => '<h3 class="widget-title">',
-            'after_title'   => '</h3>',
+            'before_title'  => '<h4 class="text-primary mb-4">',
+            'after_title'   => '</h4>',
         )
     );
 
@@ -83,8 +83,8 @@ function softuni_sidebars() {
             'description'   => __( 'A short description of the sidebar.' ),
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget'  => '</div>',
-            'before_title'  => '<h3 class="widget-title">',
-            'after_title'   => '</h3>',
+            'before_title'  => '<h4 class="text-primary mb-4">',
+            'after_title'   => '</h4>',
         )
     );
 
@@ -95,8 +95,8 @@ function softuni_sidebars() {
             'description'   => __( 'A short description of the sidebar.' ),
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget'  => '</div>',
-            'before_title'  => '<h3 class="widget-title">',
-            'after_title'   => '</h3>',
+            'before_title'  => '<h4 class="text-primary mb-4">',
+            'after_title'   => '</h4>',
         )
     );
 
@@ -107,8 +107,8 @@ function softuni_sidebars() {
             'description'   => __( 'A short description of the sidebar.' ),
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget'  => '</div>',
-            'before_title'  => '<h3 class="widget-title">',
-            'after_title'   => '</h3>',
+            'before_title'  => '<h4 class="text-primary mb-4">',
+            'after_title'   => '</h4>',
         )
     );
 }
