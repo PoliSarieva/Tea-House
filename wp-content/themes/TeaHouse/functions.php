@@ -114,3 +114,5 @@ function softuni_sidebars() {
 }
 
 add_action( 'widgets_init', 'softuni_sidebars' );
+
+?>

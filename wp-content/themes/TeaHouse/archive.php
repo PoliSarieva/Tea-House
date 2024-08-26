@@ -31,7 +31,6 @@ $wp_query = new WP_Query( $query_args );
 
             <?php else : ?>
                     Sorry, there is nothing for display!
-
             <?php endif; ?>
 
         

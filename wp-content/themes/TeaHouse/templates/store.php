@@ -6,7 +6,7 @@
 
 <?php 
 $blog_query_args = array(
-    'post_type'   => 'product',
+    'post_type'   => 'store',
     'post_status' => 'publish',
     'posts_per_page' => 3,
 );
